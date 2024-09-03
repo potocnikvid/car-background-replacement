@@ -12,6 +12,7 @@ from app.services.image_processing import fetch_image, process_image
 
 router = APIRouter()
 
+
 @router.post("/process-image")
 async def process_image_endpoint(request: ImageProcessingRequest):
     """Endpoint to process a single image and add it to a background."""
