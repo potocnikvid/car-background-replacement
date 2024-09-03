@@ -11,7 +11,7 @@ COPY environment.yml .
 RUN conda env create -f environment.yml
 
 # Make RUN commands use the new environment
-SHELL ["conda", "run", "-n", "fastapi-env", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "car-background-replacement", "/bin/bash", "-c"]
 
 # Copy the rest of the application code
 COPY . .

@@ -6,7 +6,7 @@ import io
 import base64
 import asyncio
 
-from app.core.config import API_MODE, OPTIONS, RESULT_MODE
+from app.core.config import API_MODE, API_OPTIONS
 
 
 async def fetch_image(url: str) -> bytes:
@@ -22,9 +22,9 @@ async def process_image(image_bytes: bytes, background_bytes: bytes) -> bytes:
     """Process the image by removing background and adding it to a new background."""
     async with aiohttp.ClientSession() as session:
         data = {'image': image_bytes}
-        async with session.post(OPTIONS[API_MODE]['url'],
+        async with session.post(API_OPTIONS[API_MODE]['url'],
                                 data=data,
-                                headers=OPTIONS[API_MODE]['headers']) as response:
+                                headers=API_OPTIONS[API_MODE]['headers']) as response:
             if response.status != 200:
                 raise HTTPException(status_code=500, detail="Error processing image")
             resp_json = await response.json()
