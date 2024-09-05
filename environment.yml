@@ -7,6 +7,6 @@ dependencies:
   - uvicorn
   - aiohttp
   - pillow
-  - supabase-py
+  - supabase
   - httpx[http2]  # Add this line
   - python-dotenv

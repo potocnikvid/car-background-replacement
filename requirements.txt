@@ -3,4 +3,4 @@ uvicorn
 aiohttp
 pillow
 python-dotenv
-supabase-py
+supabase
