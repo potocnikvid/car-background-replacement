@@ -4,6 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()  # Load environment variables from .env file
 
 
+# API configuration
+HOST = os.getenv("HOST", "localhost")
+PORT = os.getenv("PORT", 8000)
+NAME = os.getenv("NAME", "car-background-replacement-api")
+
 # Use 'demo' mode just to try api4ai for free. Free demo is rate limited.
 # For more details visit:
 #   https://api4.ai

@@ -1,12 +1,6 @@
 # app/services/supabase_service.py
 
 from supabase import create_client, Client
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
 from app.core.config import SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
 
 
