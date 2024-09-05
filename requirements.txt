@@ -4,3 +4,5 @@ aiohttp
 pillow
 python-dotenv
 supabase
+httpx[http2]
+jose

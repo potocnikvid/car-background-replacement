@@ -8,5 +8,7 @@ dependencies:
   - aiohttp
   - pillow
   - supabase
-  - httpx[http2]  # Add this line
   - python-dotenv
+  - pip:
+    - 'httpx[http2]'
+    - 'jose'
